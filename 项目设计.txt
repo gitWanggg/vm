@@ -1,0 +1,67 @@
+GPS服务架构
+
+TCP连接实例
+
+TCP实时连接网关
+https://github.com/aspnet/AspnetCore.Docs.git
+
+
+
+
+
+
+
+http://localhost:52909/
+http://localhost:52909/
+
+
+1、管理系统(.net MVC)
+	功能
+		a)登录
+		b)查看我的设备
+		c)查看我的车辆
+		d)车辆实时运行
+		e)车辆实时位置
+		f)轨迹回放
+		g)油耗分析
+		h)设备录入		
+2、TCP连接器 (.net Windows Service)
+	a)下位机连接
+	b)下位机协议（发送，接收)
+	c)解析数据
+	d)投递下位机消息
+3、TCP网关			(.net Core WebAPI项目)			
+	功能
+		a)接收连接器消息
+		b)投递命令消息
+		c)提供api获取轨迹信息
+		d)提供api获取油耗信息
+		e)提供api获取实时信息
+		f)提供websocket获取实时信息
+		g)提供负载均衡api获取连接器ip和端口号
+		h)查看所有连接终端
+		i)提供连接器IP和端口号负责负载均衡
+	通信方式
+		a)与连接器通信 rabbitmq
+		b)对外接口是webapi
+4、车辆管理	(.NET CORE WebAPI项目)
+	a)为设备统一编号
+	b)设备注册合法性验证
+	c)油耗统计报表
+	d)车辆基本信息
+	e)为车辆统一编号
+	f)设备与车辆绑定
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+

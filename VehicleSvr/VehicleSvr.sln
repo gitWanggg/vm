@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.902
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VMSvrAPI", "VMSvrAPI\VMSvrAPI.csproj", "{8FA5BADF-5908-4923-BAAE-ABE3646459C8}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VM.Model", "VM.Model\VM.Model.csproj", "{BE601714-E9E7-495D-8FFC-200448F9CAC2}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GpsObdSvrAPI", "GpsObdSvrAPI\GpsObdSvrAPI.csproj", "{1308F31B-6EBF-4636-AAAE-AC7F9D70EB16}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GpsObd.Common", "GpsObd.Common\GpsObd.Common.csproj", "{77C2B22F-99FC-4862-B084-BF43580D3D2B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GpsObd.BLL", "GpsObd.BLL\GpsObd.BLL.csproj", "{B41F6A2C-C2A6-4AB0-B6B6-8322E3C92B02}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GOSvrNode.BLL", "GOSvrNode.BLL\GOSvrNode.BLL.csproj", "{0A4B997F-D24F-4FEF-99B2-35F21C3BF612}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPSApiTest", "GPSApiTest\GPSApiTest.csproj", "{6A8B46E8-6DD4-4E22-B6C7-162442D1B29A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8FA5BADF-5908-4923-BAAE-ABE3646459C8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FA5BADF-5908-4923-BAAE-ABE3646459C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FA5BADF-5908-4923-BAAE-ABE3646459C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FA5BADF-5908-4923-BAAE-ABE3646459C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE601714-E9E7-495D-8FFC-200448F9CAC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE601714-E9E7-495D-8FFC-200448F9CAC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE601714-E9E7-495D-8FFC-200448F9CAC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE601714-E9E7-495D-8FFC-200448F9CAC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1308F31B-6EBF-4636-AAAE-AC7F9D70EB16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1308F31B-6EBF-4636-AAAE-AC7F9D70EB16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1308F31B-6EBF-4636-AAAE-AC7F9D70EB16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1308F31B-6EBF-4636-AAAE-AC7F9D70EB16}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77C2B22F-99FC-4862-B084-BF43580D3D2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77C2B22F-99FC-4862-B084-BF43580D3D2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77C2B22F-99FC-4862-B084-BF43580D3D2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77C2B22F-99FC-4862-B084-BF43580D3D2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B41F6A2C-C2A6-4AB0-B6B6-8322E3C92B02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B41F6A2C-C2A6-4AB0-B6B6-8322E3C92B02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B41F6A2C-C2A6-4AB0-B6B6-8322E3C92B02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B41F6A2C-C2A6-4AB0-B6B6-8322E3C92B02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A4B997F-D24F-4FEF-99B2-35F21C3BF612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A4B997F-D24F-4FEF-99B2-35F21C3BF612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A4B997F-D24F-4FEF-99B2-35F21C3BF612}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A4B997F-D24F-4FEF-99B2-35F21C3BF612}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A8B46E8-6DD4-4E22-B6C7-162442D1B29A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A8B46E8-6DD4-4E22-B6C7-162442D1B29A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A8B46E8-6DD4-4E22-B6C7-162442D1B29A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A8B46E8-6DD4-4E22-B6C7-162442D1B29A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5B9E8CE3-C0A8-4F25-AB59-8E54CDB1B4D4}
+	EndGlobalSection
+EndGlobal
