@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="VMGPSGateWayModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Connector_Info">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IP" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Port" Type="int" Nullable="false" />
+          <Property Name="InputTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Connector_Loading">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="LoadMax" Type="int" Nullable="false" />
+          <Property Name="LoadingCount" Type="int" Nullable="false" />
+          <Property Name="RunStatus" Type="int" Nullable="false" />
+          <Property Name="RunTime" Type="datetime" />
+          <Property Name="StopTime" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ConnectRecord">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="ConnectorID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TEID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InputTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TE_Info">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IMEI" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InputTime" Type="datetime" Nullable="false" />
+          <Property Name="TEModelID" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TE_Model">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="InputTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TE_ModelExtend">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="BriefText" Type="nvarchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="VMGPSGateWayModelStoreContainer">
+          <EntitySet Name="Connector_Info" EntityType="Self.Connector_Info" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Connector_Loading" EntityType="Self.Connector_Loading" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ConnectRecord" EntityType="Self.ConnectRecord" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TE_Info" EntityType="Self.TE_Info" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TE_Model" EntityType="Self.TE_Model" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TE_ModelExtend" EntityType="Self.TE_ModelExtend" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="VMGPSGateWayModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Connector_Info">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Port" Type="Int32" Nullable="false" />
+          <Property Name="InputTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="Connector_Loading">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LoadMax" Type="Int32" Nullable="false" />
+          <Property Name="LoadingCount" Type="Int32" Nullable="false" />
+          <Property Name="RunStatus" Type="Int32" Nullable="false" />
+          <Property Name="RunTime" Type="DateTime" Precision="3" />
+          <Property Name="StopTime" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ConnectRecord">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="ConnectorID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="TEID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="InputTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="TE_Info">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IMEI" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="InputTime" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="TEModelID" Type="Int32" Nullable="false" />
+        </EntityType>
+        <EntityType Name="TE_Model">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="InputTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="TE_ModelExtend">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="BriefText" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="VMGPSGateWayEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Connector_Info" EntityType="Self.Connector_Info" />
+          <EntitySet Name="Connector_Loading" EntityType="Self.Connector_Loading" />
+          <EntitySet Name="ConnectRecord" EntityType="Self.ConnectRecord" />
+          <EntitySet Name="TE_Info" EntityType="Self.TE_Info" />
+          <EntitySet Name="TE_Model" EntityType="Self.TE_Model" />
+          <EntitySet Name="TE_ModelExtend" EntityType="Self.TE_ModelExtend" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="VMGPSGateWayModelStoreContainer" CdmEntityContainer="VMGPSGateWayEntities">
+          <EntitySetMapping Name="Connector_Info">
+            <EntityTypeMapping TypeName="VMGPSGateWayModel.Connector_Info">
+              <MappingFragment StoreEntitySet="Connector_Info">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IP" ColumnName="IP" />
+                <ScalarProperty Name="Port" ColumnName="Port" />
+                <ScalarProperty Name="InputTime" ColumnName="InputTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Connector_Loading">
+            <EntityTypeMapping TypeName="VMGPSGateWayModel.Connector_Loading">
+              <MappingFragment StoreEntitySet="Connector_Loading">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="LoadMax" ColumnName="LoadMax" />
+                <ScalarProperty Name="LoadingCount" ColumnName="LoadingCount" />
+                <ScalarProperty Name="RunStatus" ColumnName="RunStatus" />
+                <ScalarProperty Name="RunTime" ColumnName="RunTime" />
+                <ScalarProperty Name="StopTime" ColumnName="StopTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ConnectRecord">
+            <EntityTypeMapping TypeName="VMGPSGateWayModel.ConnectRecord">
+              <MappingFragment StoreEntitySet="ConnectRecord">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="ConnectorID" ColumnName="ConnectorID" />
+                <ScalarProperty Name="TEID" ColumnName="TEID" />
+                <ScalarProperty Name="InputTime" ColumnName="InputTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TE_Info">
+            <EntityTypeMapping TypeName="VMGPSGateWayModel.TE_Info">
+              <MappingFragment StoreEntitySet="TE_Info">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="IMEI" ColumnName="IMEI" />
+                <ScalarProperty Name="InputTime" ColumnName="InputTime" />
+                <ScalarProperty Name="TEModelID" ColumnName="TEModelID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TE_Model">
+            <EntityTypeMapping TypeName="VMGPSGateWayModel.TE_Model">
+              <MappingFragment StoreEntitySet="TE_Model">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="InputTime" ColumnName="InputTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TE_ModelExtend">
+            <EntityTypeMapping TypeName="VMGPSGateWayModel.TE_ModelExtend">
+              <MappingFragment StoreEntitySet="TE_ModelExtend">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="BriefText" ColumnName="BriefText" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="无" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
